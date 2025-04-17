@@ -1,61 +1,78 @@
-/* style.css - Apple-Design inspiriert */
+/* style.css - Exaktes Apple-Design */
 :root {
-    --apple-black: #1d1d1f;
-    --apple-gray: #f5f5f7;
+    --apple-dark: #1d1d1f;
+    --apple-light: #f5f5f7;
     --apple-blue: #0066cc;
+    --apple-gray: #86868b;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "SF Pro Display", -apple-system, sans-serif;
     margin: 0;
-    background: var(--apple-gray);
-    color: var(--apple-black);
+    color: var(--apple-dark);
+    line-height: 1.5;
 }
 
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
-    background-size: cover;
-}
-
-.calculator-section {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-input, button {
+/* Navigation wie Apple.com */
+.apple-nav {
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(20px);
+    position: fixed;
     width: 100%;
-    padding: 12px;
-    border: 1px solid #d2d2d7;
-    border-radius: 12px;
-    font-size: 17px;
+    z-index: 100;
 }
 
-button {
-    background: var(--apple-blue);
-    color: white;
-    border: none;
-    cursor: pointer;
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+    height: 44px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--apple-light);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
     transition: opacity 0.3s;
 }
 
-button:hover {
-    opacity: 0.9;
+/* Hero-Section wie iPhone-Präsentation */
+.apple-hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 44px; /* Navbar-Höhe */
 }
 
-.results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 22px;
 }
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.subheadline {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+/* Weitere Apple-spezifische Styles... */
