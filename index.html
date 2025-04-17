@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Förderberatung | Modern wie Apple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero-Section wie Apple -->
+    <header class="hero">
+        <nav>
+            <ul>
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#calculator">Rechner</a></li>
+            </ul>
+        </nav>
+        <h1>Förderberatung 2.0</h1>
+        <p>Einfach. Präzise. Modern.</p>
+    </header>
+
+    <!-- Förderrechner -->
+    <section id="calculator" class="calculator-section">
+        <div class="form-group">
+            <label for="plz">Postleitzahl</label>
+            <input type="text" id="plz" placeholder="12345">
+        </div>
+        <button id="calculate-btn">Förderungen berechnen</button>
+        <div id="results" class="results-grid"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
